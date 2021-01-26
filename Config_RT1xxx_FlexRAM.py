@@ -336,11 +336,11 @@ def set_linkfile(file_dir):
         except:
             print("打开文件发现异常\n\r")
 
-get_rt_device("./Python_HelloWorld_FlexRAM_RT1060_SDK290_IAR")
+get_rt_device("./")
 check_usr_config()
-seek_path_startup_s("./Python_HelloWorld_FlexRAM_RT1060_SDK290_IAR")
-seek_path_linkfile("./Python_HelloWorld_FlexRAM_RT1060_SDK290_IAR")
-seek_path_board_c("./Python_HelloWorld_FlexRAM_RT1060_SDK290_IAR")
-set_startup_s("./Python_HelloWorld_FlexRAM_RT1060_SDK290_IAR")
-set_linkfile("./Python_HelloWorld_FlexRAM_RT1060_SDK290_IAR")
-set_boards_mpu("./Python_HelloWorld_FlexRAM_RT1060_SDK290_IAR")
+seek_path_startup_s("./")
+seek_path_linkfile("./")
+seek_path_board_c("./")
+set_startup_s("./")
+set_linkfile("./")
+set_boards_mpu("./")

@@ -213,8 +213,10 @@ def get_rt_device(file_dir):
 
 
 if __name__ == '__main__':
-    get_rt_device("./hello_world_rt1060_iar")
-    check_usr_config("./hello_world_rt1060_iar")
+    get_rt_device("./")
+    check_usr_config("./")
+#    get_rt_device("./hello_world_demo_cm7_iar")
+#    check_usr_config("./hello_world_demo_cm7_iar")
 # seek_path_startup_s("./hello_world_demo_cm7_mdk")
 # seek_path_linkfile("./hello_world_demo_cm7_iar")
 # seek_path_board_c("./Python_HelloWorld_FlexRAM_RT1060_SDK290_IAR")

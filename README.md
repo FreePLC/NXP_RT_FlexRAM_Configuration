@@ -1,0 +1,14 @@
+# NXP_RT_FlexRAM_Configuration简介
+NXP i.MXRT系列MCU内置支持最大512KB的TCM，可以分为ITCM, DTCM和OCRAM。ITCM是64bit位宽，DTCM是双口32bit位宽，共同挂载于CM7内核，而OCRAM这挂载与AXI总线。
+芯片出厂时是根据设置来配置512KB的TCM，用户在实际应用过程中，有时会需要对它进行修改, 具体修改方法可以参考NXP AN12077
+使用本工具可以根据用户输入快速配置SDK工程的TCM大小，目前支持IAR,MDK。
+# NXP_RT_FlexRAM_Configuration工作原理
+本工具会提示用户输入TCM的分配，并检测输入的合理性，验证成功后会修改如下几个文件：
+1.startup.s在reset入口点添加GPR寄存器修改代码
+2.修改board.c相关配置TCM的MPU配置为512K，由于如果MPU中配置的TCM小于实际的TCM大小，则大于MPU配置的TCM在使用时必须按照4字节对齐
+3.根据用户输入修改ram，flexspi_nor对应的链接文件
+# NXP_RT_FlexRAM_Configuration使用说明
+1.建议将通过MCUxpresso config tools clone一个示例工程
+2.将main.exe拷贝至该工程的根目录
+3.运行main.exe，根据提示输入512K TCM的分配方式
+4.自动完成配置

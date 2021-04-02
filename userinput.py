@@ -51,7 +51,7 @@ def get_usr_compiler():
 
 # 获取用户配置：ITCM Size, DTCM Size, OCRAM Size
 def get_usr_input(flexram_type):
-    print('Hello userinput\n\r')
+    #print('Hello userinput\n\r')
     if flexram_type == flexram_itcm:
         n = input("请输入ITCM Size Unit K (需要32的倍频)：")
     elif flexram_type == flexram_dtcm:

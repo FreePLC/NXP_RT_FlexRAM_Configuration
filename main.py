@@ -62,6 +62,7 @@ def check_usr_config(file_dir):
     while True:
         try:
             if cpu_selected == cpu_rt1050 or cpu_selected == cpu_rt1060:
+                print("请输入RT1050/60配置\n\r")
                 flexram_itcm_size = get_usr_input(flexram_itcm)
                 flexram_dtcm_size = get_usr_input(flexram_dtcm)
                 flexram_ocram_size = get_usr_input(flexram_ocram)
@@ -79,6 +80,7 @@ def check_usr_config(file_dir):
                     pass
 
             if cpu_selected == cpu_rt1020:
+                print("请输入RT1020配置\n\r")
                 flexram_itcm_size = get_usr_input(flexram_itcm)
                 flexram_dtcm_size = get_usr_input(flexram_dtcm)
                 flexram_ocram_size = get_usr_input(flexram_ocram)
@@ -96,6 +98,7 @@ def check_usr_config(file_dir):
                     pass
 
             if cpu_selected == cpu_rt1010 or cpu_selected == cpu_rt1015:
+                print("请输入RT101x配置\n\r")
                 flexram_itcm_size = get_usr_input(flexram_itcm)
                 flexram_dtcm_size = get_usr_input(flexram_dtcm)
                 flexram_ocram_size = get_usr_input(flexram_ocram)
@@ -113,7 +116,7 @@ def check_usr_config(file_dir):
                     pass
 
             if cpu_selected == cpu_rt1170:
-                print("请输入CM7配置\n\r")
+                print("请输入RT1170配置\n\r")
                 flexram_itcm_size = get_usr_input(flexram_itcm)
                 flexram_dtcm_size = get_usr_input(flexram_dtcm)
                 flexram_ocram_size = get_usr_input(flexram_ocram)
@@ -209,6 +212,10 @@ def get_rt_device(file_dir):
             elif dir == cpu_rt1015:
                 cpu_get = cpu_rt1015
                 break
+    if cpu_get == cpu_none:
+        print("Can't find the RT\r\n")
+    else:
+        print("Find %s\r\n" % cpu_get)
     cpu_selected = cpu_get
 
 
